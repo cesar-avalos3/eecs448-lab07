@@ -1,0 +1,4 @@
+Bugs
+1 - addBack, there is something wrong when creating a new node, when calling addBack several times in a row with different values on an empty list, the first function call will determine the value which will fill the list, to handle the addBack function, one needs to go to the front node (if there is any), and cycle back to a point where the next node is null. This value "smudging" could actually be explained with the fact a new node is created with the right value for the back, I think there might be a mistake on the node creation, the new value is never passed.
+2 (& 3 ?) - mSize is perhaps initialized with a 1 value instead of 0, so when calling size of an empty list it returns 1, as a result both size and isEmpty are not going to work properly.
+4 - removeFront is the same as removeBack, probably a copy and pasted type of mistake, (as a relatively lazy person I can identify with this error)
